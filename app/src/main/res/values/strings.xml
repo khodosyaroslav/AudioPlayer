@@ -9,4 +9,6 @@
     <string name="song_name">SONG NAME</string>
     <string name="_00_00">00:00</string>
     <string name="play_pause">Play pause</string>
+    <string name="notification_channel_name">Music Channel</string>
+    <string name="notification_channel_description">Shows the currently playing music</string>
 </resources>
