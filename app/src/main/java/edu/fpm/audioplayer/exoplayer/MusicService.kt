@@ -18,6 +18,7 @@ import edu.fpm.audioplayer.exoplayer.callbacks.MusicPlaybackPreparer
 import edu.fpm.audioplayer.exoplayer.callbacks.MusicPlayerEventListener
 import edu.fpm.audioplayer.exoplayer.callbacks.MusicPlayerNotificationListener
 import edu.fpm.audioplayer.other.Constants.MEDIA_ROOT_ID
+import edu.fpm.audioplayer.other.Constants.NETWORK_ERROR
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -153,6 +154,7 @@ class MusicService : MediaBrowserServiceCompat() {
                             isPlayerInitialized = true
                         }
                     } else {
+                        mediaSession.sendSessionEvent(NETWORK_ERROR, null)
                         result.sendResult(null)
                     }
                 }
